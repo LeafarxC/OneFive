@@ -1,0 +1,182 @@
+.section__swiper {
+    max-width: 100vw;
+    margin: 0 auto;
+}
+
+.swiper__headline {
+    color: var(--font-second-color);
+    font-weight: 700;
+    font-size: 5em;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    padding: 1.5em 0 0 0;
+    margin: 0;
+    padding: 0;
+    padding-top: 90px;
+    text-shadow: var(--text-shadow);
+}
+
+.swiper-container {
+    height: 550px;
+    padding: 20px 0;
+}
+
+.swiper-slide {
+    display: flex;
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+}
+
+.swiper-slide::before {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, .8) 20%, rgba(0, 0, 0, 0) 60%);
+    content: "";
+    height: 100%;
+    width: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.swiper-img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.swiper-content {
+    position: absolute;
+    bottom: 24px;
+    z-index: 3;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 15px;
+}
+
+.swiper-title {
+    color: var(--font-white-color);
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 100%;
+}
+
+/*  Título do Swiper na pagina de Artigo */
+.swiper-title1 {
+    color: var(--font-white-color);
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 100%;
+    padding: 0;
+}
+
+.swiper-sub-title {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--font-white-color);
+    line-height: 20px;
+    margin-bottom: .2em;
+}
+
+/* Sub-Título Swiper na pagina de Artigo */
+.swiper-sub-title1 {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--font-white-color);
+    line-height: 15px;
+    margin-bottom: 1.2em;
+}
+
+.swiper-read {
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-weight: 700;
+    border: 1px solid #ff2850;
+    background: var(--font-second-color);
+    color: #fff;
+    transform: perspective(1px) translateZ(0);
+    text-align: center;
+    padding: 9px 10px;
+    line-height: 1;
+    font-size: 20px;
+    min-width: 144px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.swiper-read:hover {
+    transform: scale(0.9);
+}
+
+/* Bitçao do Swiper na pagina de Artigo */
+.swiper-read1 {
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-weight: 700;
+    border: 1px solid #ff2850;
+    background: var(--font-second-color);
+    color: #fff;
+    transform: perspective(1px) translateZ(0);
+    text-align: center;
+    padding: 5px 5px;
+    line-height: 1;
+    font-size: 15px;
+    min-width: 80px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.swiper-read1:hover {
+    transform: scale(0.9);
+}
+
+/* landscape tablets, laptops/desktops */
+@media screen and (min-width : 768px) and (max-width : 1023px) {
+
+    .swiper__headline {
+        font-size: 4em;
+    }
+}
+
+/* Portrait tablets and smartphones, Android phones, landscape iPhone and Mobile */
+@media screen and (min-width : 401px) and (max-width : 767px) {
+
+    .section__swiper {
+        max-width: 90vw;
+    }
+
+    .swiper__headline {
+        font-size: 4em;
+        margin: auto;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+}
+
+/*smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media screen and (max-width : 400px) {
+
+    .swiper__headline {
+        font-size: 2.5em;
+        margin: auto;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .swiper-title {
+        font-size: 30px;
+    }
+
+
+    .swiper-sub-title {
+        font-size: 14px;
+    }
+
+    .swiper-read {
+        font-size: 15px;
+        min-width: 100px;
+    }
+}

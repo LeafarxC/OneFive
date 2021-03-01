@@ -1,0 +1,243 @@
+.header {
+    background-color: var(--font-white-color);
+    position: sticky;
+    top: 0;
+    max-width: 100vw;
+    z-index: 999;
+    overflow: hidden;
+    transition: 0.3s ease;
+    overflow: hidden;
+}
+
+.header__header {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.header__top {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.header__brand {
+    height: 4em;
+    padding-top: 1.5em;
+    cursor: pointer;
+}
+
+.nav {
+    width: 100%;
+}
+
+.header__toggle {
+    max-width: 100%;
+    display: none;
+    color: var(--font-main-color);
+    font-size: 35px;
+    cursor: pointer;
+    text-align: right;
+    padding: 0 20px;
+}
+
+.nav__list {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    display: flex;
+}
+
+.nav__item {
+    margin: 2.5em auto;
+    list-style: none;
+}
+
+.nav__link {
+    font-weight: 500;
+    color: var(--font-main-color);
+    font-size: 18px;
+    list-style: none;
+    padding: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.nav__link--active,
+.nav__link:hover {
+    color: var(--font-second-color);
+    transform: scale(0.9);
+}
+
+/* Header clubs */
+.clubs__header {
+    max-width: 1240px;
+    margin: 0 auto;
+    background-color: var(--font-white-color);
+    height: 50px;
+}
+
+.clubs__list {
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+
+.clubs__item {
+    margin: auto;
+}
+
+.clubs__img {
+    max-height: 35px;
+}
+
+/* landscape tablets, laptops/desktops */
+@media screen and (min-width : 768px) and (max-width : 1023px) {
+
+    .header__header {
+        max-width: 100%;
+    }
+
+    .header__brand {
+        height: 3em;
+    }
+
+    .nav__item {
+        margin: 2.5em auto;
+        list-style: none;
+    }
+
+    .nav__link {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    /* Header clubs */
+    .clubs__list {
+        max-width: 100%;
+    }
+
+    .clubs__item {
+        margin: auto;
+    }
+
+    .clubs__img {
+        max-height: 25px;
+    }
+}
+
+/* Portrait tablets and smartphones, Android phones, landscape iPhone and Mobile */
+@media screen and (min-width : 321px) and (max-width : 767px) {
+
+    .header__header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__brand {
+        height: 2.5em;
+        padding: 1.5em;
+    }
+
+    .header__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__toggle {
+        display: block;
+    }
+
+    .header__toggle:hover {
+        opacity: .5;
+    }
+
+    .nav__list {
+        position: fixed;
+        background: #FFF;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        clip-path: circle(30px at 90% -10%);
+        transition: all 1s ease-out;
+    }
+
+    .nav__list.open {
+        clip-path: circle(1000px at 90% -10%);
+    }
+
+    .nav__item {
+        max-width: 100%;
+    }
+
+    .nav__link {
+        font-size: 15px;
+    }
+
+    .clubs__header {
+        display: none;
+    }
+}
+
+/*smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media screen and (max-width : 320px) {
+
+    .header__header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__brand {
+        height: 2em;
+        padding: 1.5em;
+    }
+
+    .header__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__toggle {
+        display: block;
+    }
+
+    .header__toggle:hover {
+        opacity: .5;
+    }
+
+    .nav__list {
+        position: fixed;
+        background: #FFF;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+    }
+
+    .nav__list.open {
+        clip-path: circle(1000px at 90% -10%);
+    }
+
+    .nav__item {
+        max-width: 100%;
+    }
+
+    .nav__link {
+        font-size: 10px;
+    }
+
+    .clubs__header {
+        display: none;
+    }
+}
